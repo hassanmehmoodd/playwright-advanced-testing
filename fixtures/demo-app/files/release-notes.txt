@@ -1,0 +1,3 @@
+Harbor Desk release notes
+Version 1.0.0
+Visual baselines are captured on Ubuntu 24.04.

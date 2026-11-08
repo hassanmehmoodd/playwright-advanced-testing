@@ -1,0 +1,2 @@
+Harbor Desk sample upload
+Generated for the Playwright file-transfer spec.

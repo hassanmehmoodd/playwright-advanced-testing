@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Errors · Harbor Desk</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%230f5f56'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/js/nav.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="canvas">
+      <header class="site-header">
+        <div class="header-bar">
+          <a class="brand" href="/">
+            <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+              <rect width="28" height="28" rx="8" fill="#0f5f56"></rect>
+              <path d="M8 8h3v4.2h6V8h3v12h-3v-4.8H11V20H8V8z" fill="#ffffff"></path>
+            </svg>
+            Harbor Desk
+          </a>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+            Menu
+          </button>
+        </div>
+        <nav id="site-nav" class="nav-links" aria-label="Primary">
+          <a href="/">Overview</a>
+          <a href="/form">Intake</a>
+          <a href="/dynamic">Activity</a>
+          <a href="/storage">Storage</a>
+          <a href="/locale">Locale</a>
+        </nav>
+      </header>
+      <main id="main">
+        <h1>Error handling</h1>
+        <p class="lede">Dialogs, console errors, thrown exceptions, and failed requests.</p>
+        <div class="actions panel">
+          <button id="show-alert" type="button">Show alert</button>
+          <button id="show-confirm" type="button">Show confirm</button>
+          <button id="show-prompt" type="button">Show prompt</button>
+          <button id="log-error" type="button">Log a console error</button>
+          <button id="throw-error" type="button">Throw an exception</button>
+          <button id="load-failure" type="button">Load a failing request</button>
+        </div>
+        <p class="panel" data-testid="dialog-result" role="status">No dialog yet</p>
+        <p class="panel" data-testid="request-result" role="status">No request yet</p>
+        <p class="panel"><a href="/missing-case">Open a missing page</a></p>
+      </main>
+      <footer class="site-footer">
+        <p>Harbor Desk is a local fixture for browser-automation practice.</p>
+        <nav class="utility-links" aria-label="Utility">
+          <a href="/network">Network</a>
+          <a href="/upload">Files</a>
+          <a href="/errors" aria-current="page">Errors</a>
+          <a href="/a11y-broken">Axe fixture</a>
+        </nav>
+      </footer>
+    </div>
+    <script src="/js/errors.js" defer></script>
+  </body>
+</html>

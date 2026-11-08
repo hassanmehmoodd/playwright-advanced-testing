@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Internal note</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="frame-page">
+    <form>
+      <div class="field">
+        <label for="note">Internal note</label>
+        <input id="note" name="note" />
+      </div>
+      <div class="actions">
+        <button id="apply" type="button">Apply note</button>
+        <p id="echo" role="status"></p>
+      </div>
+    </form>
+    <script>
+      document.querySelector('#apply').addEventListener('click', () => {
+        document.querySelector('#echo').textContent = document.querySelector('#note').value;
+      });
+    </script>
+  </body>
+</html>

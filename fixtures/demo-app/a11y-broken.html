@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Broken accessibility fixture · Harbor Desk</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/js/nav.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="canvas">
+      <header class="site-header">
+        <div class="header-bar">
+          <a class="brand" href="/">
+            <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+              <rect width="28" height="28" rx="8" fill="#0f5f56"></rect>
+              <path d="M8 8h3v4.2h6V8h3v12h-3v-4.8H11V20H8V8z" fill="#ffffff"></path>
+            </svg>
+            Harbor Desk
+          </a>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+            Menu
+          </button>
+        </div>
+        <nav id="site-nav" class="nav-links" aria-label="Primary">
+          <a href="/">Overview</a>
+          <a href="/form">Intake</a>
+          <a href="/dynamic">Activity</a>
+          <a href="/storage">Storage</a>
+          <a href="/locale">Locale</a>
+        </nav>
+      </header>
+      <main id="main">
+        <!-- Intentional WCAG failures for the accessibility spec. -->
+        <h1>Broken accessibility fixture</h1>
+        <p style="color: #d0d5dd">This note is too light to read.</p>
+        <img src="/files/mark.svg" width="48" height="48" />
+        <p><input type="text" name="fullName" /></p>
+        <p><button type="button" style="width: 40px; height: 40px"></button></p>
+      </main>
+    </div>
+  </body>
+</html>

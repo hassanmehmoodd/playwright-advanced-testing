@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Network · Harbor Desk</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%230f5f56'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/js/nav.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="canvas">
+      <header class="site-header">
+        <div class="header-bar">
+          <a class="brand" href="/">
+            <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+              <rect width="28" height="28" rx="8" fill="#0f5f56"></rect>
+              <path d="M8 8h3v4.2h6V8h3v12h-3v-4.8H11V20H8V8z" fill="#ffffff"></path>
+            </svg>
+            Harbor Desk
+          </a>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+            Menu
+          </button>
+        </div>
+        <nav id="site-nav" class="nav-links" aria-label="Primary">
+          <a href="/">Overview</a>
+          <a href="/form">Intake</a>
+          <a href="/dynamic">Activity</a>
+          <a href="/storage">Storage</a>
+          <a href="/locale">Locale</a>
+        </nav>
+      </header>
+      <main id="main">
+        <h1>Network responses</h1>
+        <p class="lede">This list is rendered from GET /api/tasks.</p>
+        <section class="panel" aria-labelledby="tasks-heading">
+          <h2 id="tasks-heading">Open tasks</h2>
+          <p data-testid="task-status">Loading tasks…</p>
+          <ul class="task-list" data-testid="task-list"></ul>
+        </section>
+      </main>
+      <footer class="site-footer">
+        <p>Harbor Desk is a local fixture for browser-automation practice.</p>
+        <nav class="utility-links" aria-label="Utility">
+          <a href="/network" aria-current="page">Network</a>
+          <a href="/upload">Files</a>
+          <a href="/errors">Errors</a>
+          <a href="/a11y-broken">Axe fixture</a>
+        </nav>
+      </footer>
+    </div>
+    <script type="module" src="/js/network.js"></script>
+  </body>
+</html>
