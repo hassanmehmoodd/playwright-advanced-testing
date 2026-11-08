@@ -26,10 +26,10 @@ jobs:
     timeout-minutes: 20
     steps:
       - name: Check out the repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: 22
           cache: npm
@@ -52,13 +52,15 @@ jobs:
         if: always()
         run: |
           mkdir -p playwright-report test-results
-          if [ -z "$(ls -A test-results)" ]; then
+          # upload-artifact skips dotfiles unless asked. A green run often
+          # leaves only test-results/.last-run.json, so write a visible note.
+          if [ -z "$(find test-results -type f ! -name '.*' -print -quit)" ]; then
             printf '%s\n' 'No failure traces or screenshots. The HTML report is the run record.' > test-results/README.txt
           fi
 
       - name: Upload HTML report
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: playwright-report
           path: playwright-report/
@@ -67,16 +69,17 @@ jobs:
 
       - name: Upload test results
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: test-results
           path: test-results/
           retention-days: 14
           if-no-files-found: warn
+          include-hidden-files: true
 
       - name: Upload updated visual baselines
         if: always() && github.event.inputs.update_snapshots == 'true'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: visual-snapshots
           path: tests/**/*-snapshots/**
