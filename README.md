@@ -1,7 +1,5 @@
 # Playwright Advanced Testing
 
-A portfolio suite for **Hassan Mehmood**, Senior SQA Automation Engineer. It shows the browser-testing techniques hiring teams ask about in international QA and SDET interviews, each as a real Playwright Test spec rather than a slide.
-
 The suite runs on Chromium, Firefox, and WebKit. Deterministic scenarios use **Harbor Desk**, a small local fixture. Flows that are better demonstrated on a public practice site use [The Internet](https://the-internet.herokuapp.com), [Expand Testing](https://practice.expandtesting.com), and [Sauce Demo](https://www.saucedemo.com).
 
 [![Playwright Tests](https://github.com/hassanmehmoodd/playwright-advanced-testing/actions/workflows/playwright.yml/badge.svg)](https://github.com/hassanmehmoodd/playwright-advanced-testing/actions/workflows/playwright.yml)
