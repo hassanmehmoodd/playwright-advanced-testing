@@ -1,0 +1,42 @@
+{
+  "name": "playwright-advanced-testing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Advanced Playwright Test portfolio: visual regression, accessibility, cross-browser coverage, network mocking, and CI.",
+  "license": "MIT",
+  "author": "Hassan Mehmood (https://github.com/hassanmehmoodd)",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "demo": "node server/demo-server.mjs",
+    "test": "playwright test",
+    "test:chromium": "playwright test --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "test:webkit": "playwright test --project=webkit",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:update-snapshots": "playwright test tests/visual --update-snapshots",
+    "report": "playwright show-report",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hassanmehmoodd/playwright-advanced-testing.git"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.65.0",
+    "@types/node": "^22.20.5",
+    "eslint": "^10.14.0",
+    "eslint-plugin-playwright": "^2.12.2",
+    "prettier": "^3.9.10",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.72.1"
+  }
+}
